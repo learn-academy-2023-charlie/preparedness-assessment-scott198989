@@ -4,6 +4,7 @@ import ModalComponent from "./components/ModalComponent"
 import "./App.css"
 
 const App = () => {
+  [name, setName] = useState('') 
   return (
     <div className="entire-content">
       <h1>Preparedness Assessment</h1>
