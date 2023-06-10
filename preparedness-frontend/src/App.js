@@ -1,13 +1,25 @@
-import React, { useState } from "react";
-import { Button, Input, Label } from "reactstrap";
-import ModalComponent from "./components/ModalComponent";
-import "./App.css";
+import React, { useState } from 'react';
+import { Button, Input, Label } from 'reactstrap';
+import ModalComponent from './components/ModalComponent';
+import './App.css';
 
 const App = () => {
-  const [buttonClicked, setButtonClicked] = useState("");
+  const [prepModal, setPrepModal] = useState(false);
+  const [userName, setUserName] = useState({
+    name: '',
+  });
 
-  const handleClick = () => {
-    setButtonClicked("clicked");
+  const handleChange = (e) => {
+    setUserName({ ...userName, [e.target.name]: e.target.value });
+  };
+
+  const handleClickModal = () => {
+    setPrepModal(true);
+  };
+
+  const handleReset = () => {
+    setUserName({ name: '' });
+    setPrepModal(false);
   };
 
   return (
@@ -16,11 +28,11 @@ const App = () => {
       <div className="form">
         <div className="input">
           <Label for="name">Enter your name</Label>
-          <Input />
+          <Input type="text" name="name" onChange={handleChange} value={userName.name} />
         </div>
-        <button onClick={handleClick}>Click Me</button>
-        <Button>Reset</Button>
-        <ModalComponent />
+        <Button onClick={handleClickModal}>Click Me</Button>
+        <Button onClick={handleReset}>Reset</Button>
+        <ModalComponent isOpen={prepModal} toggle={() => setPrepModal(!prepModal)} userName={userName.name} />
       </div>
     </div>
   );
