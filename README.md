@@ -30,26 +30,25 @@ The frontend assessment is a React application with some basic code to define a 
 
 <img src="./preparedness-frontend/src/assets/open-modal-view.png" width="80%">
 
-- The `Reset` button clears the input field
+- [X] ~~*The `Reset` button clears the input field*~~ [2023-06-11]
 
 ### Frontend Styling Acceptance Criteria
-
-- The header text color is white and is 50px
-- The header is centered on the page
-- The input label text color is white and is 35px
-- The input label is centered on the page
-- The input field text is 18px
-- The input field should take up 50% of the width of the page
-- The input field is centered on the page
-- There is 12px of padding on the left and the right of the input field
-- There is 6px of padding on the top and the bottom of the input field
-- The background is this [image](./preparedness-frontend/src/assets/background-image.jpeg)
-- The buttons are centered under the input field
-- The background color of the buttons are `#0dcaf0`
-- The color of the text on the buttons is white
-- The is 10 px of padding on all sides of the button
-- There is 20px between the two buttons
-- There is 20px between the bottom of the input and the top of the buttons
+- [X] ~~*The header text color is white and is 50px*~~ [2023-06-11]
+- [X] ~~*The header is centered on the page*~~ [2023-06-11]
+- [X] ~~*The input label text color is white and is 35px*~~ [2023-06-11]
+- [X] ~~*The input label is centered on the page*~~ [2023-06-11]
+- [X] ~~*The input field text is 18px*~~ [2023-06-11]
+- [X] ~~*The input field should take up 50% of the width of the page*~~ [2023-06-11]
+- [X] ~~*The input field is centered on the page*~~ [2023-06-11]
+- [X] ~~*There is 12px of padding on the left and the right of the input field*~~ [2023-06-11]
+- [X] ~~*There is 6px of padding on the top and the bottom of the input field*~~ [2023-06-11]
+- [X] ~~*The background is this [image](./preparedness-frontend/src/assets/background-image.jpeg)*~~ [2023-06-11]
+- [X] ~~*The buttons are centered under the input field*~~ [2023-06-11]
+- [X] ~~*The background color of the buttons are `#0dcaf0`*~~ [2023-06-11]
+- [X] ~~*The color of the text on the buttons is white*~~ [2023-06-11]
+- [X] ~~*The is 10 px of padding on all sides of the button*~~ [2023-06-11]
+- [X] ~~*There is 20px between the two buttons*~~ [2023-06-11]
+- [X] ~~*There is 20px between the bottom of the input and the top of the buttons*~~ [2023-06-11]
 
 ---
 
@@ -57,14 +56,15 @@ The frontend assessment is a React application with some basic code to define a 
 
 Prompt: What is the relationship between a model called `person`, a model called `house`, and a model called `car`? (Hint: there is more than one right answer!)
 
-- Go to [dbdiagram](https://dbdiagram.io/) and create a free personal account
-- Start a new diagram
-- Enter the following code into the left side bar to create the base structure for three models
-- A free account will allow you to create 10 diagrams so explore different options
+- [X] ~~*Go to [dbdiagram](https://dbdiagram.io/) and create a free personal account*~~ [2023-06-11]
+- [X] ~~*Start a new diagram*~~ [2023-06-11]
+- [X] ~~*Enter the following code into the left side bar to create the base structure for three models*~~ [2023-06-11]
+- [X] ~~*A free account will allow you to create 10 diagrams so explore different options*~~ [2023-06-11]
 
 ```sql
 Table person {
   id integer
+  owner_id integer [ref: > owner.id] ###I added this foriegn key into this section of the model and it made them all related.  I am not sure why.  
   created_at timestamp
   updated_at timestamp
 }
@@ -82,9 +82,9 @@ Table house {
 }
 ```
 
-- Add foreign keys to create relationships between models
-- Use the following example from the syllabus section for creating relationships between a model called `owner` and a model called `credit_card`
-- The foreign key and the `ref` will create a visual connection between models
+- [ ] Add foreign keys to create relationships between models
+- [ ] Use the following example from the syllabus section for creating relationships between a model called `owner` and a model called `credit_card`
+- [ ] The foreign key and the `ref` will create a visual connection between models
 
 ```sql
 Table owner {
