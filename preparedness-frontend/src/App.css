@@ -1,0 +1,47 @@
+
+/* used the image stored in assets to make the background image.  Used background-size: cover to span the entire page, */
+body {
+    background-image: url("./assets/background-image.jpeg");
+    background-size: cover;
+  }
+  /*below the header is centered, the text color is white, and the text size is 50px.  */
+.header{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+/* below is dealing with the input field.  the Enter your name is set to white and centered using the text-align, font size to 35 px, 50% the size of the page and aligned in the center of the page by using margin left, right, auto. Padding was per instructions*/
+.input{  
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding: 20px;
+}
+/* size of the input font */
+.input .text .name{
+    font-size: 18px;
+}
+/* styling of the buttons, centered, added color, padding per instructions.   */
+.btns {
+    text-align: center;
+    color: #0dcaf0;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-right: 20px;
+  }
+  /* this allows the buttons to hqve seperation between each other per instructions. the .btns is calling on the class name back in JSX, button is dealing specifically with the button itself. */
+  .btns button {
+    margin-right: 20px;
+  }
+  
+
+  
